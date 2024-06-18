@@ -1,0 +1,141 @@
+.comments {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 160px;
+  @media screen and (max-width: 480px) {
+    margin-bottom: 30px;
+  }
+  &__title {
+    @include subtitle;
+    margin-bottom: 60px;
+  }
+  &__circle {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(220, 227, 91, 0.78) 0%,
+      rgba(69, 182, 73, 0.78) 100%
+    );
+    filter: blur(60px);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+  }
+  &__item {
+    position: relative;
+    min-height: 285px;
+    width: 100% !important  ;
+    background: linear-gradient(
+      180deg,
+      rgba(53, 53, 55, 0.29) 62.18%,
+      rgba(53, 53, 55, 0) 100%
+    );
+    padding: 40px 48px;
+    border-radius: 20px;
+    backdrop-filter: blur(13.88349437713623px);
+    p {
+      font-family: 'Poppins';
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26.6px;
+      color: #d1d0ca;
+    }
+  }
+  &__avatar {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__slide {
+    display: flex !important;
+    gap: 30px;
+    width: 100%;
+  }
+  &__btn-left {
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: -5px;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__swiper-slide {
+    width: 78vw !important;
+    @media screen and (max-width: 768px) {
+      width: 91vw !important;
+      min-height: 385px !important;
+    }
+    @media screen and (max-width: 480px) {
+      width: 80vw !important;
+      min-height: 285px;
+    }
+  }
+  &__btn-right {
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    right: -5px;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__pagination {
+    position: relative;
+    height: 20px;
+  }
+  &__swiper-bullet {
+    display: none;
+    @media screen and (max-width: 480px) {
+      position: absolute;
+      left: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      left: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__form-done {
+    background-image: url('../../../assets/images/form_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1000px;
+    height: 400px;
+  }
+  &__inner {
+    position: relative;
+  }
+}

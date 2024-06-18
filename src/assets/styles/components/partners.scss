@@ -1,0 +1,11 @@
+.partners {
+  &__title {
+    @include subtitle;
+    margin-bottom: 40px;
+  }
+  &__item {
+    img {
+      border-radius: 10px;
+    }
+  }
+}

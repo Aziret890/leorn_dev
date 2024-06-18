@@ -1,0 +1,96 @@
+.portfolio {
+  margin-bottom: 60px;
+  &__title {
+    @include subtitle;
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+  &__img {
+    object-fit: cover;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+    @media screen and (max-width: 480px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    img {
+      width: 100%;
+      border-radius: 26px;
+      transform: scale(1, 1);
+      transition: all 0.9s;
+      &:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: 0px 3px 30px 4px #cecccd4d;
+      }
+    }
+  }
+  &__image-0 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  &__image-1 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  &__image-2 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  &__image-3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  &__image-4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  &__image-5 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+  }
+  &__image-6 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  &__image-6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  &__image-7 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  &__image-8 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: underline;
+    border-radius: 20px;
+    transition: all 0.7s;
+    color: $secondary-color-2;
+    &:hover {
+      transition: all 0.6s;
+      text-decoration: none;
+      font-family: 'Poppins';
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      border-radius: 20px;
+      background-color: $primary-color-1;
+      color: #000;
+    }
+  }
+}

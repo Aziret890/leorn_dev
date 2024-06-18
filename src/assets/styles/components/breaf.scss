@@ -1,0 +1,44 @@
+.breaf {
+  margin-bottom: 50px;
+  &__title {
+    @include title;
+    margin-bottom: 80px;
+    @media screen and (max-width: 480px) {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    text-align: center;
+  }
+  &__dots-left {
+    display: block;
+    margin-bottom: 35px;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+  &__dots-right {
+    display: block;
+    margin-left: auto;
+    margin-top: 30px;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+  &__btn {
+    position: relative;
+    transition: all 0.9s;
+    &:hover {
+      transition: all 0.9s;
+      border: 1px solid #599952;
+      border-radius: 10px;
+      &::after {
+        position: absolute;
+        content: url('../../images/right_green.svg');
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.form {
+  position: relative;
+  width: 50%;
+  color: $secondary-color-1;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
+    column-gap: 25px;
+  }
+
+  &__label {
+    select {
+      margin-top: 10px;
+      margin-bottom: 38px;
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 22px 33px;
+      width: 100%;
+      height: 68px;
+      font-family: 'Poppins';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #cecccd;
+      border: 1px solid #c1c1c1;
+    }
+  }
+  &__input,
+  textarea {
+    display: block;
+    margin-bottom: 38px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 6px;
+    padding: 22px 33px;
+    width: 100%;
+    height: 68px;
+    border: 1px solid #050505;
+    color: #050505;
+    &::placeholder {
+      color: $secondary-color-2;
+    }
+    @media screen and (max-width: 480px) {
+      height: 48px;
+      margin-bottom: 20px;
+    }
+  }
+
+  textarea {
+    height: 181px;
+    &::placeholder {
+      font-family: 'Poppins';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.6px;
+      color: $secondary-color-2;
+    }
+  }
+
+  &__text {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.6px;
+    color: $secondary-color-2;
+  }
+
+  &__btn-orange {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #050505;
+    margin-top: 28px;
+    padding: 20px 130px;
+    border-radius: 10px;
+    transition: background-color 0.9s;
+    box-shadow: 0 0 50px 0 rgba(230, 161, 75, 0.3);
+    background-color: $primary-color-1;
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 480px) {
+      padding-left: 79px;
+      padding-right: 79px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px 0 rgba(230, 161, 75, 0.4);
+      background: $secondary-color-2;
+    }
+  }
+  &__btn-green {
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29.5px;
+    letter-spacing: 0.145em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding: 8px 23px;
+    background-color: $primary-color-2;
+  }
+  &__text {
+    position: relative;
+  }
+}
+.form__group {
+  position: relative;
+}
+.error {
+  color: red !important;
+
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+.from__textarea-error {
+  position: absolute;
+  bottom: -30px;
+}
+.loader {
+  border: 4px solid $primary-color-2;
+  border-left-color: #1a1a1a;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

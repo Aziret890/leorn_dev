@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1045.11px;
+  padding: 108px 160px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  border-radius: 15px;
+  background-color: $secondary-color-1;
+  text-align: center;
+  .question {
+    display: flex;
+    justify-content: space-between;
+  }
+  .questionText {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.2px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  svg {
+    cursor: pointer;
+  }
+  .questionAnswer {
+    transition: max-height 0.3s ease;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.6px;
+    text-align: left;
+    color: #595566;
+  }
+  .hr {
+    color: #dadada;
+  }
+  .wrap__subtitle {
+    display: inline-block;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29.5px;
+    letter-spacing: 0.145em;
+    border-radius: 20px;
+    text-align: center;
+    background-color: $primary-color-2;
+    color: white;
+  }
+  .wrap__title {
+    font-size: 45px;
+    margin-top: 20px;
+    font-weight: 700;
+    line-height: 52.2px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 700px;
+  }
+  .wrap__title {
+    font-size: 36px !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .wrapper {
+    max-width: 670px;
+    border-radius: 0px;
+    padding-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    max-width: 342px;
+    border-radius: 20px;
+    padding: 30px;
+    gap: 15px;
+  }
+  .wrap__title {
+    margin-top: 0px !important;
+    font-size: 23px !important;
+  }
+  .questionText {
+    font-size: 14px !important;
+  }
+  .questionAnswer {
+    font-size: 13px !important;
+    font-style: italic;
+    line-height: 15.08px;
+    text-align: left;
+  }
+  .hr {
+    display: none;
+  }
+  .question {
+    height: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .ques {
+    display: flex;
+    justify-content: center;
+  }
+}

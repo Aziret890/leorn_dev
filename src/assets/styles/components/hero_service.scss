@@ -1,0 +1,40 @@
+.hero {
+  max-width: 100%;
+  margin-bottom: 60px;
+  height: 422px;
+  top: 133px;
+  background: linear-gradient(
+    89.9deg,
+    #ffffff 0.09%,
+    #ffffff 29.66%,
+    rgba(255, 255, 255, 0.738308) 39.94%,
+    #ffffff00 75.3%
+  );
+  &__title {
+    position: absolute;
+    max-width: 600px;
+    top: 40%;
+    left: 128px;
+    font-size: 52.46px;
+    font-weight: 700;
+    line-height: 66.1px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: $primary-color-3;
+    background-color: transparent;
+    span {
+      display: block;
+      color: $primary-color-2;
+    }
+    @media screen and (max-width: 480px) {
+      top: 40%;
+      left: 40px;
+      font-size: 42.46px;
+      max-width: 341px;
+      text-align: left;
+    }
+  }
+  img {
+    position: relative;
+  }
+}

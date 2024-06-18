@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import './libs/variables.scss';
+@import './libs/reset.scss';
+@import './mixins/titles.scss';
+
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/form.scss';
+@import './components/stack.scss';
+
+@import './components/about/head.scss';
+@import './components/about/info.scss';
+@import './components/about/question.scss';
+@import './components/about/command.scss';
+@import './components/portfolio/collage.scss';
+
+@import './components/breaf.scss';
+@import './components/portfolio.scss';
+@import './components/partners.scss';
+@import './components/comments.scss';
+@import './components/sent.scss';
+@import './components/hero_service.scss';
+@import './components/service.scss';
+@import './components/development.scss';
+
+.circle {
+  position: absolute;
+  top: 1380px;
+  right: 0px;
+  width: 320px;
+  height: 320px;
+  border-radius: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 234, 187, 0.52) 0%,
+    rgba(248, 181, 0, 0.52) 100%
+  );
+
+  filter: blur(60px);
+  animation:
+    colorChange 10s infinite,
+    sizeChange 10s infinite alternate;
+  transition:
+    width 0.5s ease,
+    height 0.5s ease;
+  z-index: -6;
+}
+
+.p2 {
+  left: 0;
+  top: 2700px;
+}
+.p3 {
+  display: none;
+  width: 102px !important;
+  height: 94px !important;
+  left: 0;
+  top: 1000px !important;
+  background: linear-gradient(
+    90deg,
+    rgba(220, 227, 91, 0.58) -711.01%,
+    rgba(69, 182, 73, 0.58) -611.01%
+  );
+  filter: blur(30px);
+}
+.p4 {
+  display: none;
+  width: 180px !important;
+  height: 180px !important;
+  top: 1300px !important;
+  background: linear-gradient(
+    90deg,
+    rgba(220, 227, 91, 0.58) 0%,
+    rgba(69, 182, 73, 0.58) 100%
+  );
+}
+.p5 {
+  display: none;
+  width: 180px !important;
+  height: 180px !important;
+  top: 4500px !important;
+  background: linear-gradient(
+    90deg,
+    rgba(220, 227, 91, 0.58) 0%,
+    rgba(69, 182, 73, 0.58) 100%
+  );
+}
+
+@media (max-width: 900px) {
+  .circle {
+    width: 258px;
+    height: 258px;
+    top: 2000px;
+  }
+  .p2 {
+    top: 3800px;
+  }
+  .p3 {
+    display: block;
+  }
+  .p4 {
+    display: block;
+  }
+  .p5 {
+    display: block;
+  }
+}
+@media (max-width: 700px) {
+  .circle {
+    top: 1400px !important;
+  }
+  .p2 {
+    top: 3000px !important;
+  }
+  .p3 {
+    top: 600px !important;
+  }
+  .p4 {
+    left: 0;
+    top: 2050px !important;
+  }
+  .p5 {
+    top: 3900px !important;
+  }
+}

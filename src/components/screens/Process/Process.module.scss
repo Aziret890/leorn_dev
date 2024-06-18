@@ -1,0 +1,79 @@
+@import '../../../assets/styles/libs/variables.scss';
+.process {
+  padding-top: 43px;
+  margin-bottom: 60px;
+  @media screen and (max-width: 900px) {
+    text-align: center;
+    padding: 0;
+  }
+  &__img {
+    @media screen and (max-width: 900px) {
+      display: block;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 480px) {
+      max-width: 250px;
+      height: 250px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(604px, 1fr));
+    margin: 0 auto;
+    column-gap: 25px;
+    @media screen and (max-width: 480px) {
+      display: block;
+    }
+  }
+  &__plan {
+    color: $secondary-color-1;
+
+    @media screen and (max-width: 900px) {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-family: 'Roboto Slab';
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 31.65px;
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 45.25px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.17px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 480px) {
+      font-size: 15px;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 10px;
+    @media screen and (max-width: 480px) {
+      max-width: 205px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
+    @media screen and (max-width: 900px) {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 480px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

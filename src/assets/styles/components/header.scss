@@ -1,0 +1,195 @@
+.header {
+  &__top {
+    display: flex;
+    justify-content: right;
+    gap: 133px;
+    padding: 19px 0;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Poppins';
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      color: $secondary-color-1;
+    }
+    @media screen and (max-width: 480px) {
+      gap: 20px;
+    }
+  }
+  &__item {
+    &.active {
+    }
+  }
+  &__bottom {
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    background: rgba(206, 204, 205, 0.03);
+    padding: 30px 0;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    gap: 57px;
+    @media screen and (max-width: 900px) {
+      gap: 35px;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      position: absolute;
+      left: 50px;
+      bottom: 20%;
+      z-index: 11;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: $secondary-color-1;
+    @media screen and (max-width: 900px) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      color: #000;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 57px;
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 10;
+      &.open {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      gap: 30px;
+    }
+  }
+  &__lang {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    option {
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+    }
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      bottom: 70px;
+      left: 50px;
+    }
+  }
+  &__btn {
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 10.98px;
+    font-weight: 500;
+    line-height: 13.73px;
+    cursor: pointer;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 7px;
+    background-color: $secondary-color-1;
+    border: 1px solid $primary-color-3;
+    transition: all 0.9s;
+    color: #000;
+    &:hover {
+      box-shadow: 0 0 20px 0 rgba(230, 161, 75, 0.3);
+      background: $primary-color-1;
+      border: 1px solid $primary-color-2;
+    }
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      bottom: 20px;
+      left: 50px;
+    }
+  }
+  &__active-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+    @media screen and (max-width: 480px) {
+      background-color: #000;
+    }
+  }
+  &__burger-btn {
+    display: none; // По умолчанию скрываем кнопку
+    @media screen and (max-width: 768px) {
+      display: block; // Показываем кнопку только на мобильных устройствах (ширина экрана до 768px)
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none;
+      z-index: 1000;
+      padding: 10px;
+    }
+
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+      margin-bottom: 5px;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  &__burger-btn-x {
+    display: none;
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      right: 4%;
+      top: 80px;
+      display: block;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none;
+      z-index: 1000;
+      padding: 10px;
+
+      // Стили для линий бургера
+      span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: $primary-color-2;
+        margin-bottom: 5px;
+        transition: transform 0.3s ease-in-out;
+
+        &:first-child {
+          transform: rotate(45deg) translate(8px, 9px);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg) translate(5px, -5px);
+          width: 35px; // Ширина крестика
+        }
+      }
+    }
+  }
+}

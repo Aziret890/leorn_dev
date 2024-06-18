@@ -1,0 +1,15 @@
+@mixin title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 121%;
+  text-transform: uppercase;
+  text-align: center;
+  color: $secondary-color-1;
+}
+@mixin subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $secondary-color-1;
+}
